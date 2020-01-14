@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "246689030048",
+    "firebase_url": "https://navigation-drawer-18bcd.firebaseio.com",
+    "project_id": "navigation-drawer-18bcd",
+    "storage_bucket": "navigation-drawer-18bcd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246689030048:android:8b8de75b0589faf5714ec5",
+        "android_client_info": {
+          "package_name": "com.example.navigationdrawer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246689030048-5bc5v1cpu87nnjvvu1c2lli8reifc47v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.navigationdrawer",
+            "certificate_hash": "8a1e4f3f654097c1c49923865a5ec54d9f0c00f6"
+          }
+        },
+        {
+          "client_id": "246689030048-5e39sr0o9d6rojv0b5u6snv9qi467vjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnREceCUD3TzZ7HACqwIssbF6NbJWVNhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246689030048-5e39sr0o9d6rojv0b5u6snv9qi467vjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

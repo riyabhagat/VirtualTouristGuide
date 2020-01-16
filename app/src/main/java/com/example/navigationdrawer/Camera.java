@@ -1,11 +1,11 @@
 package com.example.navigationdrawer;
-
-
-
 import android.Manifest;
+import org.tensorflow.lite.Interpreter;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
+import android.graphics.ColorSpace;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -16,11 +16,20 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+
 
 public class Camera extends AppCompatActivity {
     ImageView imageView;
     Button btn_camera, btn_gallery;
+    Interpreter tflite;
     public  static final int RequestPermissionCode  = 1 ;
+
+
 
 
     @Override
@@ -34,6 +43,7 @@ public class Camera extends AppCompatActivity {
         btn_gallery = (Button) findViewById(R.id.btn_gallery);
 
         EnableRuntimePermission();
+
 
         btn_camera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +68,8 @@ public class Camera extends AppCompatActivity {
         });
 
     }
+
+
 
     private void EnableRuntimePermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(Camera.this, Manifest.permission.CAMERA))
